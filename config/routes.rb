@@ -1,5 +1,11 @@
 Rails.application.routes.draw do
 
+  get 'tweets/index'
+
+  get 'tweets/show'
+
+  get 'tweets/new'
+
   devise_for :users
   root 'staticpages#home'
 
