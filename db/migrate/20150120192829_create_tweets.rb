@@ -2,7 +2,7 @@ class CreateTweets < ActiveRecord::Migration
   def change
     create_table :tweets do |t|
       t.string :body
-      t.reference :user
+      t.references :user
 
       t.timestamps null: false
     end

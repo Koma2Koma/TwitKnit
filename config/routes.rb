@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
 
+  root 'static_pages#home'
+  
+  get 'static_pages/home'
+
   get 'tweets/index'
 
   get 'tweets/show'
@@ -7,7 +11,6 @@ Rails.application.routes.draw do
   get 'tweets/new'
 
   devise_for :users
-  root 'staticpages#home'
 
   resources :users do
     resources :tweets, only: [:show, :index]

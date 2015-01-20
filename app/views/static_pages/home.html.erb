@@ -1,0 +1,9 @@
+<h1>Welcome to TwitKnit</h1>
+
+<% if current_user %>
+  <%= link_to 'Start Tweeting', new_user_session_path %>
+<% else %>
+  <%= link_to 'Sign Up', new_user_registration_path %>
+  <br>
+  <%= link_to 'Log In', new_user_session_path %>
+<% end %>
